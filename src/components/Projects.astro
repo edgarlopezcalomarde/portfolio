@@ -1,0 +1,30 @@
+---
+import Project from "./Project.astro";
+
+const PROJECTS = [
+  {
+    title: "QuickMd",
+    url: "https://github.com/edgarlopezcalomarde/quickmd-markdown-editor",
+    alt: "QucikMd Photo",
+    img: "/quickmd-editor.jpg",
+    description:
+      "It is an intuitive web application that simplifies the creation and editing of Markdown documents. ",
+  },
+  {
+    title: "Quantum Mart API",
+    description:
+      "REST API that wraps the logic behind an online store (in this case of electronic devices), this has an authentication system, user management and an access point to display products, update their stock / features and unsubscribe a product.",
+    url: "https://github.com/edgarlopezcalomarde/quickmd-markdown-editor",
+    img: "/quantum-mart-api.jpg",
+    alt: "Quantum Mart Photo",
+  },
+];
+---
+
+<ul class="flex flex-col gap-8">
+  {
+    PROJECTS.map((project) => {
+      return <Project {...project} />;
+    })
+  }
+</ul>

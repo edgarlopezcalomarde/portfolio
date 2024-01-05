@@ -1,0 +1,58 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Nowadays...",
+    title: "Developer",
+    company: "Metasuma",
+    description: [
+      "Currently working in IT solutions development, I am focused on creating and implementing innovative solutions that address the specific needs and challenges of a particular business environment.",
+      "My responsibilities include software programming, technology architecture design, systems integration, as well as the evaluation and adoption of new and emerging technologies.",
+    ],
+    stack: [
+      "ASP.NET",
+      "C#",
+      "React",
+      "Power apps",
+      "Power Automate",
+      "Sharepoint",
+      "SQL"
+    ],
+  },
+  {
+    date: "March 2023",
+    title: "Software Engineer Junior",
+    company: "Mimacom",
+    description: [
+      `
+      During my internship as a Junior Software Engineer, I participated
+      in the development of an internal application based on React for a
+      waste plant. `,
+
+      `This application allowed the management of suppliers, waste requests
+      with different statuses and the generation of products from refined
+      waste. In addition, I collaborated with other teams to coordinate
+      the whole process and ensure the correct integration of the
+      products.`,
+      `
+      I was also responsible for posting products on a portal
+      accessible to customers and managing tickets generated. This
+      experience provided me with solid skills in frontend web
+      development, teamwork and project management.
+      `,
+    ],
+
+    stack: ["ReactJS", "Redux", "JEST", "GIT", "GITLAB", "JIRA"],
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

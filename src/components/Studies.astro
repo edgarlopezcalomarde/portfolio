@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+
+const EXPERIENCIE = [
+  {
+    date: "September 2022.",
+    title: "Advanced technician in web application development",
+    description: [""],
+    stack: ["Angular","JS","Laravel","SASS","BEM"],
+  },
+  {
+    date: "September 2020",
+    title: "Advanced technician in multiplatform application development",
+    description: [""],
+
+    stack: ["Java","Kotlin","Python","SQL","PHP","JS", "MongoDB"],
+  },
+  {
+    date: "September 2018",
+    title: "Microcomputer Systems and Network Technician",
+    description: [""],
+    stack: ["Windows Server 2012", "Linux", "HTML"],
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
